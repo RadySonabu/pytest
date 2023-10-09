@@ -11,7 +11,6 @@ def test_answer():
 
 def test_main():
     value = main()
-
     assert value == '123'
 
 # def test_fail():
