@@ -32,3 +32,7 @@ jobs:
           pytest
         env:
           SAMPLE_VALUE: ${{ secrets.SAMPLE_VALUE }}
+
+      - name: Debug Secret Value
+        run: |
+          echo "MY_SECRET_KEY: ${{ secrets.SAMPLE_VALUE }}"
