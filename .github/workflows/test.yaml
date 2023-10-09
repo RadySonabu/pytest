@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: "SAMPLE_VALUE"
     strategy:
       matrix:
         python-version: ["3.11"]
