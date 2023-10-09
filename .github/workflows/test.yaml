@@ -27,12 +27,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Debug Secret Value
+        run: |
+          echo "MY_SECRET_KEY: ${{ secrets.SAMPLE_VALUE }}"
+
       - name: Test with pytest
         run: |
           pytest
         env:
           SAMPLE_VALUE: ${{ secrets.SAMPLE_VALUE }}
-
-      - name: Debug Secret Value
-        run: |
-          echo "MY_SECRET_KEY: ${{ secrets.SAMPLE_VALUE }}"
