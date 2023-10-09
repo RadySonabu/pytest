@@ -13,3 +13,7 @@ def test_main():
     value = main()
 
     assert value == '123'
+
+def test_fail():
+    value = False
+    assert True == value
